@@ -1,3 +1,3 @@
 # quote-generator
-Link to the site:
+Demo:
 https://mxassanov.github.io/quote-generator/
