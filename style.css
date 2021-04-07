@@ -82,7 +82,7 @@ button:active {
     font-size: 1.5rem;
 }
 
-/*Прелоадер*/
+
 .loader {
     border: 16px solid #f3f3f3;
     border-top: 16px solid #333;
@@ -101,7 +101,7 @@ button:active {
     }
 }
 
-/* Медиа-запрос для планшетов и меньших девайсов */
+/* Медиа-запрос для планшетов и смартфонов */
 @media screen and (max-width: 999px) {
     .quote-container {
         margin: auto 10px;

@@ -21,7 +21,7 @@ function removeLoadingSpinner() {
 async function getQuote() {
   showLoadingSpinner()
 
-  //используем proxy-костыль для обхода CORS
+  // Используем proxy-костыль для обхода CORS
   const apiUrl = 'http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=ru'
   const proxyUrl = 'https://cors.bridged.cc/'
 
@@ -29,14 +29,14 @@ async function getQuote() {
     const response = await fetch(proxyUrl + apiUrl)
     const data = await response.json()
 
-    //есди автор неизвестен, указываем это
+    // Если автор неизвестен, указываем это
     if (data.quoteAuthor === '') {
       quoteAuthor.innerText = 'Автор неизвестен'
     } else {
       quoteAuthor.innerText = data.quoteAuthor
     }
 
-    //уменьшение размера шрифта для длинных текстов
+    // Уменьшение размера шрифта для длинных текстов
     if (data.quoteText.length > 120) {
       quoteText.classList.add('long-quote')
     } else {
@@ -51,7 +51,7 @@ async function getQuote() {
   }
 }
 
-//твитнуть цитату
+// Твитнуть цитату
 function tweetQuote() {
   const quote = quoteText.innerText
   const author = quoteAuthor.innerText
